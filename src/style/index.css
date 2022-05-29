@@ -1,0 +1,357 @@
+* {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    outline: none;
+    font-family: 'Proxima Nova', Roboto, system-ui, Tahoma, sans-serif;
+    box-sizing: border-box;
+}
+
+html {
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+
+body {
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    color: black;
+}
+
+a,
+span,
+p,
+b,
+h1,
+h2,
+h3,
+h4,
+h5 {
+    color: black;
+}
+
+h1 {
+    font-size: 48px;
+}
+
+h2 {
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 30px;
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    padding: 0;
+    border: none;
+    font: inherit;
+    color: inherit;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+/**/
+.wrapper {
+    padding: 35px 0;
+}
+
+/*header*/
+.wrapper__header {
+    margin-bottom: 35px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #EEEEEE;
+}
+
+.logo__link {
+    display: block;
+    width: 65px;
+    height: 25px;
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Logo-Logo.svg/715px-Logo-Logo.svg.png?20150107004557');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.header__social {
+    display: flex;
+    padding-top: 5px;
+    align-items: center;
+}
+
+.social:not(:last-child) {
+    display: block;
+    margin-right: 15px;
+}
+
+.header__phone-number {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.phone-number--svg {
+    width: 25px;
+    height: 25px;
+    margin-right: 10px;
+    display: block;
+}
+
+.phone-number--tel {
+    display: block;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.phone-number--tel:not(:last-child) {
+    margin-right: 10px;
+}
+
+.header__worktime {
+    font-size: 20px;
+}
+
+.header__cart {
+    position: relative;
+    transition: 0.3s;
+}
+
+.header__cart:hover {
+    transform: scale(1.2);
+}
+
+.header__cart:active {
+    transform: scale(0.9);
+}
+
+
+.countsht {
+    position: absolute;
+    top: -9px;
+    left: 18px;
+    width: 20px;
+    height: 18px;
+    border-radius: 50%;
+    background: red;
+    font-size: 12px;
+    font-weight: bolder;
+    color: white;
+    text-align: center;
+}
+
+/*main*/
+
+/*category*/
+.container {
+    padding: 10px 150px;
+}
+
+.category {
+    margin-bottom: 35px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.category__item {
+    width: 10%;
+    padding: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
+    transition: 1s;
+    /* Время эффекта */
+}
+
+.category__btn {
+    width: 100%;
+}
+
+.category--field {
+    width: 100%;
+    height: 150px;
+    background-image: url("https://mobi-like.com/block/apple_400x400.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.category--text {
+    font-size: 25px;
+    color: black;
+}
+
+.category__item:hover {
+    transform: scale(1.05);
+    /* Увеличиваем масштаб */
+}
+
+.category__item:active {
+    transform: scale(0.9);
+}
+
+.category__item--active {
+    box-shadow: 0 0 10px rgba(256, 0, 0, 1);
+}
+
+/*sort*/
+
+.sort {
+    position: relative;
+    width: 235px;
+    margin-bottom: 45px;
+}
+
+.sort__label {
+    display: flex;
+    align-items: center;
+}
+
+.sort__popup_list {
+    display: flex;
+    justify-content: space-around;
+}
+
+.sort__popup {
+    position: absolute;
+    left: 105px;
+    top: 5px;
+    margin-top: 15px;
+    background: #ffffff;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.09);
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 10px 0;
+    width: 300px;
+}
+
+.sort__category {
+    color: red;
+    cursor: pointer;
+}
+
+.sort__popup--active {
+    /* font-weight: bold; */
+    color: red;
+}
+
+.sort__popup_item {
+    cursor: pointer;
+}
+
+/*goods*/
+
+.content__items {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.content__item {
+    width: 22%;
+    height: 600px;
+    margin-right: 40px;
+    margin-bottom: 15px;
+    padding: 20px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
+    transition: transform .1s ease;
+}
+
+.content__item:hover {
+    transform: translateY(1px);
+    transition: transform .1s ease;
+}
+
+.item__img {
+    height: 50%;
+    margin-left: 25px;
+    margin-bottom: 35px;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.item__price {
+    text-align: center;
+    font-size: 30px;
+    font-weight: bolder;
+    letter-spacing: 0.07rem;
+}
+
+.item__descr {
+    padding: 10px 20px;
+}
+
+.item__descr--text {
+    text-align: center;
+    margin-bottom: 10px;
+    display: block;
+    font-size: 15px;
+}
+
+.item__mamory {
+    margin-bottom: 15px;
+    padding: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 10px;
+    background-color: #EEEEEE;
+}
+
+.item__mamory--btn {
+    width: 45%;
+    outline: 1px solid white;
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    transition: all .3s ease-in-out;
+}
+
+.active {
+    color: white;
+    background-color: red;
+}
+
+.disable {
+    opacity: 0.4;
+    pointer-events: none;
+    /*не кликабельность элемента*/
+    cursor: auto;
+}
+
+.item__mamory--btn:hover {
+    color: white;
+    background-color: red;
+    transition: all .3s ease-in-out;
+}
+
+
+
+.item__buy {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.item__buy--link,
+.item__buy--btn {
+    display: block;
+    font-size: 25px;
+    color: red;
+    transition: transform 0.3s ease-in-out;
+}
+
+.item__buy--link:hover,
+.item__buy--btn:hover {
+    transform: scale(1.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+.item__buy--link:active,
+.item__buy--btn:active {
+    transform: scale(0.9);
+    transition: transform 0.3s ease-in-out;
+}
